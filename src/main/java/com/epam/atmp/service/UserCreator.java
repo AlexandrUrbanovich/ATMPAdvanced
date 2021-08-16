@@ -16,7 +16,6 @@ public class UserCreator {
     }
 
     public static User adminUser() {
-        //TODO
-        return new User(ADMIN_USER_NAME, ADMIN_PASSWORD);
+        return new User(TestDataReader.getTestData(ADMIN_USER_NAME), TestDataReader.getTestData(ADMIN_PASSWORD));
     }
 }

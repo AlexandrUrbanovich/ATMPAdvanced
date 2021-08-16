@@ -1,3 +1,5 @@
+package com.epam.atmp.tests;
+
 import com.epam.atmp.driver.DriverSingleton;
 import com.epam.atmp.util.TestListener;
 import org.openqa.selenium.WebDriver;

@@ -9,21 +9,20 @@ import java.util.Properties;
 public class TestDataReader {
 
     public static String getTestData(String key) {
+
+        Properties properties = null;
+
         try {
             FileReader reader = new FileReader("./src/main/resources/user.properties");
 
-            Properties properties = new Properties();
+            properties = new Properties();
             properties.load(reader);
-
-            return properties.getProperty(key);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //TODO
-        return key;
+        return properties.getProperty(key);
     }
-
 
 }
