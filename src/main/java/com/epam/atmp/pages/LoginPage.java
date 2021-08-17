@@ -29,7 +29,7 @@ public class LoginPage extends AbstractPage {
     @Override
     protected AbstractPage openPage() {
         driver.navigate().to(PAGE_URL);
-        logger.info("Login page opened");
+        logger.info("Login page opened.");
         return this;
     }
 }
