@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class LoginTest extends CommonConditions {
     private static final Logger logger = Logger.getLogger(CommonConditions.class);
 
-    @Test
+    @Test(dataProvider = "getUserData", dataProviderClass = DataProviderClass.class)
     public void loginToRP() {
         //TODO
         User testUser = UserCreator.defaultUser();
