@@ -12,8 +12,9 @@ import static org.testng.Assert.assertTrue;
 public class LoginTest extends CommonConditions {
     private static final Logger logger = Logger.getLogger(LoginTest.class);
 
-    @Test(dataProvider = "getUserData", dataProviderClass = DataProviderClass.class)
-    public void loginToRP(String userName, String password) throws InterruptedException {
+    @Test(dataProvider = "getUserData", dataProviderClass = DataProviderClass.class,
+            description = "Verify regular user and admin user are able to sign-in ")
+    public void loginToRP(String userName, String password) {
         String loggedInUserName = new LoginPage(driver)
                 .openPage()
                 .login(userName, password)

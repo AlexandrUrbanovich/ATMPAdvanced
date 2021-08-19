@@ -1,6 +1,5 @@
 package com.epam.atmp.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -47,11 +46,10 @@ public class MainPage extends AbstractPage {
         PageFactory.initElements(this.driver, this);
     }
 
-    public String getDefaultLoggedUser() throws InterruptedException {
+    public String getDefaultLoggedUser() {
         if (popupMessage.isDisplayed()) {
             popupMessage.click();
         }
-
         profileButton.click();
         return userName.getText();
     }
