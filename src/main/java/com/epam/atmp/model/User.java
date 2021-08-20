@@ -1,6 +1,5 @@
 package com.epam.atmp.model;
 
-
 import java.util.Objects;
 
 public class User {
