@@ -11,6 +11,18 @@
     <properties>
         <maven.compiler.source>14</maven.compiler.source>
         <maven.compiler.target>14</maven.compiler.target>
+
+        <selenium.java.version>3.141.59</selenium.java.version>
+        <web.driver.manager.version>4.4.3</web.driver.manager.version>
+        <testhg.version>7.4.0</testhg.version>
+        <log4j.api.version>2.11.2</log4j.api.version>
+        <log4j.core.version>2.11.2</log4j.core.version>
+        <log4j.version>1.2.17</log4j.version>
+        <slf4j.log4j12.version>1.7.32</slf4j.log4j12.version>
+        <agent.java.testng.version>5.1.0-RC-1</agent.java.testng.version>
+        <logger.java.log4j.version>5.0.3</logger.java.log4j.version>
+        <hamcrest.version>2.1</hamcrest.version>
+        <maven.surefire.plugin.version>2.15</maven.surefire.plugin.version>
     </properties>
 
     <dependencies>
@@ -19,64 +31,65 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>3.141.59</version>
+            <version>${selenium.java.version}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>4.4.3</version>
+            <version>${web.driver.manager.version}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.4.0</version>
+            <version>${testhg.version}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
-            <version>2.11.2</version>
+            <version>${log4j.api.version}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
-            <version>2.11.2</version>
+            <version>${log4j.core.version}</version>
         </dependency>
 
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
+            <version>${log4j.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
-            <version>1.7.32</version>
+            <version>${slf4j.log4j12.version}</version>
         </dependency>
 
         <dependency>
             <groupId>com.epam.reportportal</groupId>
             <artifactId>agent-java-testng</artifactId>
-            <version>5.1.0-RC-1</version>
+            <version>${agent.java.testng.version}</version>
         </dependency>
+
         <dependency>
             <groupId>com.epam.reportportal</groupId>
             <artifactId>logger-java-log4j</artifactId>
-            <version>5.0.3</version>
+            <version>${logger.java.log4j.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest</artifactId>
-            <version>2.1</version>
+            <version>${hamcrest.version}</version>
             <scope>test</scope>
         </dependency>
 
@@ -108,7 +121,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.15</version>
+                    <version>${maven.surefire.plugin.version}</version>
                     <configuration>
                         <properties>
                             <property>

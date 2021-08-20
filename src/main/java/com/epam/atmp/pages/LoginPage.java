@@ -7,12 +7,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.concurrent.TimeUnit;
 
 public class LoginPage extends AbstractPage {
 
     private final Logger logger = LogManager.getRootLogger();
-    private final String PAGE_URL = "http://localhost:8080/ui/#login";
+    private static final String PAGE_URL = "http://localhost:8080/ui/#login";
 
     @FindBy(xpath = "//a[@href='http://reportportal.io/']")
     private WebElement linkText;
@@ -41,7 +40,7 @@ public class LoginPage extends AbstractPage {
         inputLogin.sendKeys(userName);
         inputPassword.sendKeys(password);
         loginButton.click();
-        logger.info("Login with userName: [" + userName + "] and password: [" + password + "]");
+        logger.info("Login with userName: [{}] and password: [{}}]", userName, password);
         return new MainPage(driver);
     }
 

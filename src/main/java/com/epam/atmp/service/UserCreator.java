@@ -4,7 +4,7 @@ import com.epam.atmp.model.User;
 import org.apache.log4j.Logger;
 
 public class UserCreator {
-    private static final Logger logger = Logger.getLogger(TestDataReader.class);
+    private static final Logger logger = Logger.getLogger(UserCreator.class);
 
     public static final String DEFAULT_USER_NAME = "default.user.name";
     public static final String DEFAULT_PASSWORD = "default.password";
