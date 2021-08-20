@@ -1,7 +1,6 @@
 package com.epam.atmp.pages;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends AbstractPage {
 
-    private final Logger logger = LogManager.getRootLogger();
+    private static final Logger LOGGER = Logger.getLogger(LoginPage.class);
     private static final String PAGE_URL = "http://localhost:8080/ui/#login";
 
     @FindBy(xpath = "//a[@href='http://reportportal.io/']")
@@ -32,7 +31,7 @@ public class LoginPage extends AbstractPage {
 
     public LoginPage openPage() {
         driver.navigate().to(PAGE_URL);
-        logger.info("Login page opened.");
+        LOGGER.info("Login page opened.");
         return this;
     }
 
@@ -40,7 +39,7 @@ public class LoginPage extends AbstractPage {
         inputLogin.sendKeys(userName);
         inputPassword.sendKeys(password);
         loginButton.click();
-        logger.info("Login with userName: [{}] and password: [{}}]", userName, password);
+        LOGGER.info("Login with userName: [" + userName + "] and password: [" + password +"}]");
         return new MainPage(driver);
     }
 

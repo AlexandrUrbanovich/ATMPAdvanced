@@ -14,7 +14,7 @@ public class DriverSingleton {
 
     private static WebDriver driver;
 
-    private static final Logger logger = Logger.getLogger(DriverSingleton.class);
+    private static final Logger LOGGER = Logger.getLogger(DriverSingleton.class);
 
     public static WebDriver getDriver() {
         if (null == driver) {
@@ -22,19 +22,19 @@ public class DriverSingleton {
                 case "firefox": {
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
-                    logger.info("Browser Firefox is running.");
+                    LOGGER.info("Browser Firefox is running.");
                     break;
                 }
                 case "edge": {
                     WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver();
-                    logger.info("Browser EDGE is running.");
+                    LOGGER.info("Browser EDGE is running.");
                     break;
                 }
                 default: {
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
-                    logger.info("Browser Chrome is running.");
+                    LOGGER.info("Browser Chrome is running.");
                     break;
                 }
             }
@@ -47,7 +47,7 @@ public class DriverSingleton {
     public static void closeDriver() {
         driver.quit();
         driver = null;
-        logger.info("Browser closed.");
+        LOGGER.info("Browser closed.");
     }
 
 }

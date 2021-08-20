@@ -1,7 +1,6 @@
 package com.epam.atmp.pages;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class MainPage extends AbstractPage {
 
-    private final Logger logger = LogManager.getRootLogger();
+    private static final org.apache.log4j.Logger LOGGER = Logger.getLogger(MainPage.class);
 
     @FindBy(xpath = "//div[@id='app']/div['dl']")
     private WebElement dlButton;
@@ -55,7 +54,7 @@ public class MainPage extends AbstractPage {
             popupMessage.click();
         }
         profileButton.click();
-        logger.info("Get name foe logged user.");
+        LOGGER.info("Get name for logged user.");
         return userName.getText();
     }
 

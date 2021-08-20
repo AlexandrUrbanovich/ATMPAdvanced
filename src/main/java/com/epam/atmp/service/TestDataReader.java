@@ -10,7 +10,7 @@ import java.util.Properties;
 
 public class TestDataReader {
 
-    private static final Logger logger = Logger.getLogger(TestDataReader.class);
+    private static final Logger LOGGER = Logger.getLogger(TestDataReader.class);
 
     public static String getTestData(String key) {
 
@@ -22,11 +22,11 @@ public class TestDataReader {
             properties = new Properties();
             properties.load(reader);
 
-            logger.info("Test data has been read.");
+            LOGGER.info("Test data has been read.");
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            LOGGER.error("FileNotFoundException", e);
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error("IOException", e);
         }
         return properties.getProperty(key);
     }
