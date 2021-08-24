@@ -1,5 +1,7 @@
 package com.epam.atmp.service;
 
+import org.apache.log4j.Logger;
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -8,22 +10,25 @@ import java.util.Properties;
 
 public class TestDataReader {
 
+    private static final Logger LOGGER = Logger.getLogger(TestDataReader.class);
+
     public static String getTestData(String key) {
+
+        Properties properties = null;
+
         try {
             FileReader reader = new FileReader("./src/main/resources/user.properties");
 
-            Properties properties = new Properties();
+            properties = new Properties();
             properties.load(reader);
 
-            return properties.getProperty(key);
+            LOGGER.info("Test data has been read.");
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            LOGGER.error("FileNotFoundException", e);
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error("IOException", e);
         }
-        //TODO
-        return key;
+        return properties.getProperty(key);
     }
-
 
 }
