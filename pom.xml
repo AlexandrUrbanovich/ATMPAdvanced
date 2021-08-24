@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.epam.atmp</groupId>
-    <artifactId>ATMPAdvanced4</artifactId>
+    <artifactId>ATMPAdvanced</artifactId>
     <version>1.0-SNAPSHOT</version>
     <url>http://maven.apache.org</url>
 
@@ -23,6 +23,9 @@
         <logger.java.log4j.version>5.0.3</logger.java.log4j.version>
         <hamcrest.version>2.1</hamcrest.version>
         <maven.surefire.plugin.version>2.15</maven.surefire.plugin.version>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
     <dependencies>
@@ -114,6 +117,11 @@
                             </property>
                         </properties>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.sonarsource.scanner.maven</groupId>
+                    <artifactId>sonar-maven-plugin</artifactId>
+                    <version>3.9.0.2155</version>
                 </plugin>
             </plugins>
         </pluginManagement>
