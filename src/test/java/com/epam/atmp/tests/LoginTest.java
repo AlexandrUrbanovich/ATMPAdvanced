@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-@Listeners({ReportPortalTestNGListener.class})
+//@Listeners({ReportPortalTestNGListener.class})
 public class LoginTest extends CommonConditions {
 
     @Test(dataProvider = "getUserData", dataProviderClass = DataProviderClass.class,
