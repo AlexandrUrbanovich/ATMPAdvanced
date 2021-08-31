@@ -9,9 +9,6 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-<!--        <maven.compiler.source>14</maven.compiler.source>-->
-<!--        <maven.compiler.target>14</maven.compiler.target>-->
-
         <selenium.java.version>3.141.59</selenium.java.version>
         <web.driver.manager.version>4.4.3</web.driver.manager.version>
         <testhg.version>7.4.0</testhg.version>
