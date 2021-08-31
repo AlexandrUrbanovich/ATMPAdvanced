@@ -9,8 +9,8 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-        <maven.compiler.source>14</maven.compiler.source>
-        <maven.compiler.target>14</maven.compiler.target>
+<!--        <maven.compiler.source>14</maven.compiler.source>-->
+<!--        <maven.compiler.target>14</maven.compiler.target>-->
 
         <selenium.java.version>3.141.59</selenium.java.version>
         <web.driver.manager.version>4.4.3</web.driver.manager.version>
@@ -123,6 +123,17 @@
                     <artifactId>sonar-maven-plugin</artifactId>
                     <version>3.9.0.2155</version>
                 </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.1</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+
             </plugins>
         </pluginManagement>
     </build>
