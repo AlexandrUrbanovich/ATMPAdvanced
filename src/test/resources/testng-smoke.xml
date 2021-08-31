@@ -3,7 +3,7 @@
 <suite name="Smoke" verbose="1">
     <test name="UserLogin">
         <classes>
-            <class name="com.epam.atmp.tests.LoginTest" />
+            <class name="com.epam.atmp.tests.TestTest" />
         </classes>
     </test>
     
