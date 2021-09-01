@@ -23,6 +23,8 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <suiteFile>./src/test/resources/testng-smoke.xml</suiteFile>
     </properties>
 
     <dependencies>
@@ -112,6 +114,9 @@
                                 <name>listener</name>
                                 <value>com.epam.reportportal.testng.ReportPortalTestNGListener</value>
                             </property>
+                                    <suiteXmlFiles>
+                                        <suiteXmlFile>${suiteFile}</suiteXmlFile>
+                                    </suiteXmlFiles>
                         </properties>
                     </configuration>
                 </plugin>
