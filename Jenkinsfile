@@ -4,15 +4,15 @@ node {
     }
 
       stage("Get code"){
-          git branch: "${branch}", url: 'https://github.com/AlexandrUrbanovich/ATMPAdvanced.git'
+          git branch: "master", url: 'https://github.com/AlexandrUrbanovich/ATMPAdvanced.git'
       }
 
       stage('Test'){
         script {
-            currentBuild.displayName = currentBuild.displayName + " ${suiteFile} ${browserName}"
+            currentBuild.displayName = currentBuild.displayName + " testng-smoke chrome"
         }
         catchError {
-            sh "mvn clean test -DsuiteFile=./src/test/resources/${suiteFile}.xml -Dbrowser=${browserName}"
+            sh "mvn clean test -DsuiteFile=./src/test/resources/testng-smoke.xml -Dbrowser=chrome"
         }
       }
 
