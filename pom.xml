@@ -19,7 +19,7 @@
         <agent.java.testng.version>5.1.0-RC-1</agent.java.testng.version>
         <logger.java.log4j.version>5.0.3</logger.java.log4j.version>
         <hamcrest.version>2.1</hamcrest.version>
-        <maven.surefire.plugin.version>2.15</maven.surefire.plugin.version>
+        <maven.surefire.plugin.version>3.0.0-M5</maven.surefire.plugin.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -105,19 +105,10 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>${maven.surefire.plugin.version}</version>
                     <configuration>
-                        <properties>
-                            <property>
-                                <name>usedefaultlisteners</name>
-                                <value>false</value> <!-- disabling default listeners is optional -->
-                            </property>
-                            <property>
-                                <name>listener</name>
-                                <value>com.epam.reportportal.testng.ReportPortalTestNGListener</value>
-                            </property>
-                                    <suiteXmlFiles>
-                                        <suiteXmlFile>${suiteFile}</suiteXmlFile>
-                                    </suiteXmlFiles>
-                        </properties>
+                        <suiteXmlFiles>
+                            <suiteXmlFile>${suiteFile}</suiteXmlFile>
+<!--                            <suiteXmlFile>src/test/resources/testng-smoke.xml</suiteXmlFile>-->
+                        </suiteXmlFiles>
                     </configuration>
                 </plugin>
                 <plugin>
