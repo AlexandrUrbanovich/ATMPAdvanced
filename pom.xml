@@ -9,9 +9,6 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-<!--        <maven.compiler.source>14</maven.compiler.source>-->
-<!--        <maven.compiler.target>14</maven.compiler.target>-->
-
         <selenium.java.version>3.141.59</selenium.java.version>
         <web.driver.manager.version>4.4.3</web.driver.manager.version>
         <testhg.version>7.4.0</testhg.version>
@@ -22,10 +19,12 @@
         <agent.java.testng.version>5.1.0-RC-1</agent.java.testng.version>
         <logger.java.log4j.version>5.0.3</logger.java.log4j.version>
         <hamcrest.version>2.1</hamcrest.version>
-        <maven.surefire.plugin.version>2.15</maven.surefire.plugin.version>
+        <maven.surefire.plugin.version>3.0.0-M5</maven.surefire.plugin.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <suiteFile>src/test/resources/testng-smoke.xml</suiteFile>
     </properties>
 
     <dependencies>
@@ -106,16 +105,10 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>${maven.surefire.plugin.version}</version>
                     <configuration>
-                        <properties>
-                            <property>
-                                <name>usedefaultlisteners</name>
-                                <value>false</value> <!-- disabling default listeners is optional -->
-                            </property>
-                            <property>
-                                <name>listener</name>
-                                <value>com.epam.reportportal.testng.ReportPortalTestNGListener</value>
-                            </property>
-                        </properties>
+                        <suiteXmlFiles>
+                            <suiteXmlFile>${suiteFile}</suiteXmlFile>
+<!--                            <suiteXmlFile>src/test/resources/testng-smoke.xml</suiteXmlFile>-->
+                        </suiteXmlFiles>
                     </configuration>
                 </plugin>
                 <plugin>
