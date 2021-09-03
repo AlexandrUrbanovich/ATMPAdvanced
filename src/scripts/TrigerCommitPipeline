@@ -12,7 +12,7 @@ node {
             currentBuild.displayName = currentBuild.displayName + " testng-smoke chrome"
         }
         catchError {
-            sh "mvn clean test -DsuiteFile=./src/test/resources/testng-smoke.xml -Dbrowser=chrome"
+            sh "mvn clean test -DsuiteFile=./src/test/resources/suite/testng-smoke.xml -Dbrowser=chrome"
         }
       }
 
