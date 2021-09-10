@@ -107,7 +107,6 @@
                     <configuration>
                         <suiteXmlFiles>
                             <suiteXmlFile>${suiteFile}</suiteXmlFile>
-<!--                            <suiteXmlFile>src/test/resources/testng-smoke.xml</suiteXmlFile>-->
                         </suiteXmlFiles>
                     </configuration>
                 </plugin>
