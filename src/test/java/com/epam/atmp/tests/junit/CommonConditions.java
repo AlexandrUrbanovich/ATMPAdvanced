@@ -1,22 +1,21 @@
-package com.epam.atmp.tests;
+package com.epam.atmp.tests.junit;
 
 import com.epam.atmp.driver.DriverSingleton;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-
 
 public class CommonConditions {
 
     protected WebDriver driver;
 
-    @BeforeMethod()
-    public void setUp() {
+    @BeforeEach
+    void setUp() {
         driver = DriverSingleton.getDriver();
     }
 
-    @AfterMethod(alwaysRun = true)
-    public void stopBrowser() {
+    @AfterEach
+    void stopBrowser() {
         DriverSingleton.closeDriver();
     }
 }

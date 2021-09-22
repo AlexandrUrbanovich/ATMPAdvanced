@@ -1,4 +1,4 @@
-package com.epam.atmp.tests;
+package com.epam.atmp.tests.testNG;
 
 import com.epam.reportportal.testng.ReportPortalTestNGListener;
 import org.testng.annotations.Listeners;

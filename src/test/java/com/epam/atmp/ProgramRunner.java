@@ -1,6 +1,6 @@
 package com.epam.atmp;
 
-import com.epam.atmp.tests.LoginTest;
+import com.epam.atmp.tests.testNG.LoginTest;
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
 

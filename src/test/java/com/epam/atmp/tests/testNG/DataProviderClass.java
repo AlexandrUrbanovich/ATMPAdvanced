@@ -1,4 +1,4 @@
-package com.epam.atmp.tests;
+package com.epam.atmp.tests.testNG;
 
 import com.epam.atmp.service.UserCreator;
 import org.testng.annotations.DataProvider;
